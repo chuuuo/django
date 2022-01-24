@@ -7,6 +7,7 @@ from django.shortcuts import render
 from django.urls import reverse, reverse_lazy
 from django.views.generic import CreateView, DetailView
 
+from accountapp.forms import AccountUpdateForm
 from accountapp.models import HelloWorld
 
 
@@ -34,3 +35,9 @@ class AccountDetailView(DetailView):
     model = User
     context_object_name = 'target_user' # 내 계정 말고 해당 계정 정보를 보기 위한
     template_name = 'accountapp/detail.html'
+
+class AccountUpdateView(CreateView):
+    model = User
+    form_class = AccountUpdateForm
+    success_url = reverse_lazy('accountapp:hello_world')
+    template_name = 'accountapp/update.html'
