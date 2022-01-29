@@ -156,3 +156,9 @@ STATICFILES_DIRS = ( os.path.join('static'), )
 
 LOGIN_REDIRECT_URL = reverse_lazy('accountapp:hello_world')
 LOGOUT_REDIRECT_URL = reverse_lazy('accountapp:hello_world')
+
+MEDIA_URL = '/media/'
+# 서버에서 미디어에 접근할 수 있는 루트
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# media 디렉토리
