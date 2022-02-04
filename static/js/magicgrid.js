@@ -293,4 +293,12 @@ let magicGrid = new MagicGrid({
   useMin: true
 });
 
+// 이미지가 로딩될 때 겹치지 않도록 재배치 해주는 역할
+var masonrys = document.getElementsByTagName("img");
+for (let i = 0; i < masonrys.length; i++) {
+    masonrys[i].addEventListener('load', function () {
+        magicGrid.positionItems;
+        }, false);
+}
+
 magicGrid.listen();
