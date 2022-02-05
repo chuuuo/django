@@ -16,7 +16,6 @@
     margin: 2rem 0;
 }
 
-# screen이 500px 이하로 떨어지면 폰트 크기도 모두 13px로 작아짐
 @mdeia screen and (max-width: 500px) {
     html {
     font-size: 13px;
